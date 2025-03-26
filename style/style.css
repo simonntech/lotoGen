@@ -1,0 +1,97 @@
+:root {
+    --fontDefault: "Arial";
+    --bgbox: #f7f7f7;
+    --bgboxtrans: #ffffffd7;
+    --bgColor1: #203832;
+    --bgColor2: #669c83;
+    --emphasisColor: #b3ccc0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2) 20%);
+    font-family: var(--fontDefault);
+    align-items: center;
+}
+
+.header {
+    width: 85vw;
+    padding: 16px;
+    background-color: var(--bgboxtrans);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 16px 16px;
+}
+
+.header img {
+    width: 250px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgbox);
+    width: 85vw;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.24);
+}
+
+.container-top {
+    background-image: url(../assets/fundo.jfif);
+    background-size: cover;
+    height: 200px;
+}
+
+.container-consult {
+    display: flex;
+    justify-content: center;
+}
+
+.container-title {
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--emphasisColor);
+}
+
+.container-title p {
+    color: var(--bgColor1);
+    padding-top: 8px;
+}
+
+.container-choice {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 24px;
+}
+
+.btn {
+    background-color: #203832;
+    color: var(--bgbox);
+    padding: 12px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bolder;
+}
+
+.container-txt {
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+.container-disclaim {
+    font-size: 0.8rem;
+    background-color: var(--emphasisColor);
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+}
