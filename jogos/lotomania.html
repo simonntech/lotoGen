@@ -18,32 +18,32 @@
         <div class="container-top">
             <h1><img src="../assets/icone.png"> Lotomania</h1>
         </div>
-        <div class="result">
-            <div class="balls" id="n1">35</div>
-            <div class="balls" id="n2">35</div>
-            <div class="balls" id="n3">35</div>
-            <div class="balls" id="n4">35</div>
-            <div class="balls" id="n5">35</div>
-            <div class="balls" id="n6">35</div>
-            <div class="balls" id="n7">35</div>
-            <div class="balls" id="n8">35</div>
-            <div class="balls" id="n9">35</div>
-            <div class="balls" id="n10">35</div>
-            <div class="balls" id="n11">35</div>
-            <div class="balls" id="n12">35</div>
-            <div class="balls" id="n13">35</div>
-            <div class="balls" id="n14">35</div>
-            <div class="balls" id="n15">35</div>
-            <div class="balls" id="n16">35</div>
-            <div class="balls" id="n17">35</div>
-            <div class="balls" id="n18">35</div>
-            <div class="balls" id="n19">35</div>
-            <div class="balls" id="n20">35</div>
+        <div class="result transparent" id="result">
+            <div class="balls" id="n1"></div>
+            <div class="balls" id="n2"></div>
+            <div class="balls" id="n3"></div>
+            <div class="balls" id="n4"></div>
+            <div class="balls" id="n5"></div>
+            <div class="balls" id="n6"></div>
+            <div class="balls" id="n7"></div>
+            <div class="balls" id="n8"></div>
+            <div class="balls" id="n9"></div>
+            <div class="balls" id="n10"></div>
+            <div class="balls" id="n11"></div>
+            <div class="balls" id="n12"></div>
+            <div class="balls" id="n13"></div>
+            <div class="balls" id="n14"></div>
+            <div class="balls" id="n15"></div>
+            <div class="balls" id="n16"></div>
+            <div class="balls" id="n17"></div>
+            <div class="balls" id="n18"></div>
+            <div class="balls" id="n19"></div>
+            <div class="balls" id="n20"></div>
         </div>
         <div class="btn-generate">
-            <button class="btn"><img src="../assets/btn-luck.png"><br>Gerar Números</button>
+            <button class="btn" onclick="generateNumbers()"><img src="../assets/btn-luck.png"><br>Gerar Números</button>
         </div>
-        <div class="areasave">
+        <div class="areasave transparent" id="areasave">
             <button class="btn save"><img src="../assets/save-btn.png"> <p>Salvar Jogo</p></button>
         </div>
         <div class="nav">
@@ -54,5 +54,6 @@
             <p><em><strong>*</strong>Este aplicativo Web não faz nenhum jogo ou aposta diretamente com a Caixa ou outro site de apostas</em></p>
         </div>
     </div>
+    <script src="../javascript/loto-script.js"></script>
 </body>
 </html>

@@ -1,12 +1,23 @@
 const result = document.getElementById('result');
 const areasave = document.getElementById('areasave')
-const n1 = document.getElementById('n1');
-const n2 = document.getElementById('n2');
-const n3 = document.getElementById('n3');
-const n4 = document.getElementById('n4');
-const n5 = document.getElementById('n5');
-const n6 = document.getElementById('n6');
 
 function generateNumbers() {
+    let numeros = [];
+
+    while (numeros.length < 6) {
+        let randomNumber = Math.floor(Math.random() * 60) +1;
+
+        if (!numeros.includes(randomNumber)) {
+        numeros.push(randomNumber);
+    }
+}
+
+    numeros.sort((a, b) => a - b)
     
+    for (let i = 0; i < 6; i++) {
+        document.getElementById(`n${i+1}`).innerText = numeros[i].toString().padStart(2, '0');
+    }
+
+    result.classList.remove('transparent')
+    areasave.classList.remove('transparent')
 }

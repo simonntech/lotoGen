@@ -96,6 +96,7 @@ body {
 }
 
 .balls {
+    width: 24px;
     border-radius: 50%;
     background-color: var(--bgbox);
     padding: 8px;
