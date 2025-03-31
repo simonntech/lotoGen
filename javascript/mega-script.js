@@ -20,4 +20,16 @@ function generateNumbers() {
 
     result.classList.remove('transparent')
     areasave.classList.remove('transparent')
+
+    return numeros
+}
+
+
+function save(numeros) {
+    localStorage.setItem('ultimoSorteio', JSON.stringify(numeros))
+
+    alert("Jogo salvo!" + numeros)
+
+    result.classList.add('transparent')
+    areasave.classList.add('transparent')
 }
