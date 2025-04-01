@@ -145,12 +145,18 @@ a {
 }
 
 .list-item {
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
     background-color: var(--bgColor3);
     padding: 8px;
     border-radius: 8px;
+}
+
+.datalista {
+    font-size: 1rem;
+    font-weight: 200;
 }
 
 .delete {
@@ -161,4 +167,10 @@ a {
     text-align: center;
     font-style: italic;
     color: var(--bgColor2);
+}
+
+.aviso {
+    text-align: center;
+    font-size: .9rem;
+    font-style: italic;
 }

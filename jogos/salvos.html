@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="assets/icone.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/jogos.style.css">
 </head>
-<body>
+<body onload="acessoHistoricoJogos()">
     <header class="header">
         <a href="../index.html"><img src="../assets/logo.png" alt="Logo LOTOGen"></a>
     </header>
@@ -15,17 +15,12 @@
         <div class="container-top">
             <h1><img src="../assets/saveicone.png"> Jogos Salvos</h1>
         </div>
-        <div class="empty">
+        <p class="aviso">Os jogos são salvos apenas no seu dispositivo. Se apagar o histórico do navegador, você perde os jogos salvos...</p>
+        <div class="empty" id="empty">
             <img src="../assets/empty.png">
             <p>Nenhum jogo encontrado...</p>
         </div>
-        <div class="list transparent">
-            <div class="list-item">
-                <h3>Mega-Sena</h3>
-                <p>01, 10, 20, 30, 40, 50</p>
-                <p>&#128521; <strong>Boa sorte!</strong> &#127808;</p>
-                <button class="btn delete"><img src="../assets/deleteicon.png" alt=""> Excluir Jogo</button>
-            </div>
+        <div class="list transparent" id="list">
         </div>
         <div class="nav">
             <a href="mega.html" class="btn"><img src="../assets/icone-btn.png"><br>Mega-Sena</a>

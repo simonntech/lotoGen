@@ -1,5 +1,6 @@
 const result = document.getElementById('result');
 const areasave = document.getElementById('areasave');
+let currentNumbers = [];
 
 function generateNumbers() {
     let numeros = [];
@@ -20,4 +21,28 @@ function generateNumbers() {
 
     result.classList.remove('transparent');
     areasave.classList.remove('transparent');
+
+    currentNumbers = numeros;
+}
+
+function save() {
+
+    try {
+        localStorage.setItem('sorteioQuina', JSON.stringify(currentNumbers));
+        alert ("Jogo da Quina salvo com sucesso: " + currentNumbers.join(', '));
+
+        const historico = JSON.parse(localStorage.getItem('historicoJogos') || '[]');
+        historico.push({
+            jogo: 'Quina',
+            data: new Date().toLocaleString(),
+            numeros: currentNumbers
+        });
+
+        localStorage.setItem('historicoJogos', JSON.stringify(historico));
+
+        result.classList.add('transparent');
+        areasave.classList.add('transparent');
+    } catch(e) {
+        alert("Erro ao salvar: " + e.message);
+    }
 }

@@ -1,5 +1,6 @@
 const result = document.getElementById('result');
-const areasave = document.getElementById('areasave')
+const areasave = document.getElementById('areasave');
+let currentNumbers = [];
 
 function generateNumbers() {
     let numeros = [];
@@ -21,15 +22,27 @@ function generateNumbers() {
     result.classList.remove('transparent')
     areasave.classList.remove('transparent')
 
-    return numeros
+    currentNumbers = numeros;
 }
 
+function save() {
 
-function save(numeros) {
-    localStorage.setItem('ultimoSorteio', JSON.stringify(numeros))
+    try {
+        localStorage.setItem('sorteioMega', JSON.stringify(currentNumbers));
+        alert ("Jogo da MEGA salvo com sucesso: " + currentNumbers.join(', '));
 
-    alert("Jogo salvo!" + numeros)
+        const historico = JSON.parse(localStorage.getItem('historicoJogos') || '[]');
+        historico.push({
+            jogo: 'Mega-sena',
+            data: new Date().toLocaleString(),
+            numeros: currentNumbers
+        });
 
-    result.classList.add('transparent')
-    areasave.classList.add('transparent')
+        localStorage.setItem('historicoJogos', JSON.stringify(historico));
+
+        result.classList.add('transparent');
+        areasave.classList.add('transparent');
+    } catch(e) {
+        alert("Erro ao salvar: " + e.message);
+    }
 }
