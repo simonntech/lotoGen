@@ -18,8 +18,10 @@ function acessoHistoricoJogos() {
             item.className = 'list-item'
 
             item.innerHTML = `
-                <h3>${jogo.jogo} - <span class="datalista"> ${jogo.data} </span></h3>
-                <p><strong>Números: </strong>${jogo.numeros.join(', ')}</p>
+                <h3>${jogo.jogo} <hr><p class="datalista">Jogo salvo em: ${jogo.data} </p></h3>
+                <div class ="result">
+                ${jogo.numeros.map(numero => `<div class="balls">${numero}</div>`).join('')}
+                </div>
                 <button class="btn delete" onclick = "remove(${index})"><img src="../assets/deleteicon.png" alt="excluir jogo"> Excluir Jogo</button>
             `;
 

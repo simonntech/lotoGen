@@ -188,6 +188,11 @@ a {
     font-style: italic;
 }
 
+hr {
+    padding: 4px;
+    border: none;
+}
+
 @media only screen and (min-width: 600px) {
     .container {
         width: 450px;
