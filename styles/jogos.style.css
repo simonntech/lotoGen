@@ -21,6 +21,7 @@ body {
     flex-direction: column;
     gap: 20px;
     background-image: linear-gradient(to bottom, var(--bgColor1), var(--bgColor2) 20%);
+    background-attachment: fixed;
     font-family: var(--fontDefault);
     align-items: center;
 }
@@ -156,7 +157,7 @@ a {
 
 .datalista {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .delete {
