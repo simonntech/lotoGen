@@ -34,7 +34,7 @@ body {
 }
 
 .header img {
-    width: 250px;
+    width: 200px;
 }
 
 .container {
@@ -101,4 +101,18 @@ body {
 a {
     text-decoration: none;
     color: var(--bgbox);
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 450px;
+    }
+
+    .header {
+        width: 95%;
+    }
+
+    .header img {
+        width: 250px;
+    }
 }

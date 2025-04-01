@@ -1,5 +1,6 @@
 const result = document.getElementById('result');
 const areasave = document.getElementById('areasave');
+let msg = document.getElementById('msg');
 let currentNumbers = [];
 
 function generateNumbers() {
@@ -25,11 +26,21 @@ function generateNumbers() {
     currentNumbers = numeros;
 }
 
+function showMsg() {
+    msg.classList.remove('transparent');
+
+    setTimeout(() => {
+        msg.classList.add('transparent');
+    }, 5000)
+}
+
+
 function save() {
 
     try {
         localStorage.setItem('sorteioQuina', JSON.stringify(currentNumbers));
-        alert ("Jogo da Quina salvo com sucesso: " + currentNumbers.join(', '));
+
+        showMsg();
 
         const historico = JSON.parse(localStorage.getItem('historicoJogos') || '[]');
         historico.push({
